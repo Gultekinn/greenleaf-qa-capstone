@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///home/coder/Desktop/Files/lab/workspace/rendered/zephyr_testcase.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Cases</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f5f7;
+      --panel: #ffffff;
+      --border: #dfe1e6;
+      --text: #172b4d;
+      --muted: #5e6c84;
+      --accent: #0052cc;
+      --accent-soft: #deebff;
+      --success: #00875a;
+      --warn: #ff991f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: linear-gradient(135deg, #0747a6, #0052cc);
+      color: #fff;
+      padding: 1.25rem 1.5rem;
+    }
+    header h1 { margin: 0 0 0.25rem; font-size: 1.35rem; }
+    header p { margin: 0; opacity: 0.92; }
+    main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 2px rgba(9, 30, 66, 0.08);
+    }
+    h2 { margin: 0 0 0.75rem; font-size: 1.05rem; }
+    h3 { margin: 1rem 0 0.5rem; font-size: 0.95rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td { border: 1px solid var(--border); padding: 0.55rem 0.65rem; vertical-align: top; text-align: left; }
+    th { background: #fafbfc; color: var(--muted); font-weight: 600; }
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .badge.epic { background: #e3fcef; color: var(--success); }
+    .badge.story { background: #fff0b3; color: #974f0c; }
+    .badge.bug { background: #ffebe6; color: #bf2600; }
+    ol { margin: 0.25rem 0 0 1.25rem; padding: 0; }
+    li { margin-bottom: 0.35rem; }
+    dl { display: grid; grid-template-columns: 160px 1fr; gap: 0.35rem 1rem; margin: 0; }
+    dt { color: var(--muted); font-weight: 600; }
+    dd { margin: 0; }
+    pre {
+      background: #091e420a;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+    .note { color: var(--muted); font-size: 0.9rem; }
+    .focus { border-left: 4px solid var(--accent); padding-left: 0.75rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Local QA Workspace</h1>
+    <p>Zephyr-style test design — GreenLeaf Grocers</p>
+  </header>
+  <main>
+    
+    <section class="panel">
+      <p class="note">Atlas equivalent: Zephyr test case view. The first case is highlighted for portfolio capture.</p>
+    </section>
+    
+            <section class="panel focus">
+              <h2>TC-GL-01: Guest checkout happy path with valid cart items</h2>
+              <dl>
+                <dt>Linked story</dt><dd>GL-101</dd>
+                <dt>Preconditions</dt><dd>User has items in the cart at http://localhost:3000/cart and is not signed in.</dd>
+                <dt>Expected result</dt><dd>Order is placed successfully and redirected to order confirmation page with a thank-you message.</dd>
+              </dl>
+              <h3>Test steps</h3>
+              <ol><li>Navigate to http://localhost:3000/checkout</li><li>Fill in required shipping and billing details with valid guest information</li><li>Click the Submit Order button</li></ol>
+            </section>
+            
+            <section class="panel">
+              <h2>TC-GL-02: Checkout form validation blocks submission when required fields are missing</h2>
+              <dl>
+                <dt>Linked story</dt><dd>GL-103</dd>
+                <dt>Preconditions</dt><dd>User has items in the cart and navigates to http://localhost:3000/checkout</dd>
+                <dt>Expected result</dt><dd>Form submission is blocked and visual validation error messages appear for the missing required fields.</dd>
+              </dl>
+              <h3>Test steps</h3>
+              <ol><li>Leave required shipping fields (e.g. Full Name or Address) blank</li><li>Click the Submit Order button</li></ol>
+            </section>
+            
+            <section class="panel">
+              <h2>TC-GL-03: Promo code edge case validation for expired or invalid codes</h2>
+              <dl>
+                <dt>Linked story</dt><dd>GL-102</dd>
+                <dt>Preconditions</dt><dd>User is on the checkout page http://localhost:3000/checkout with active cart items.</dd>
+                <dt>Expected result</dt><dd>Application displays a graceful user-friendly rejection message stating the promo code is invalid or expired, without crashing.</dd>
+              </dl>
+              <h3>Test steps</h3>
+              <ol><li>Enter an expired or invalid promo code (e.g., EXPIRED20) into the promo code field</li><li>Click the Apply Promo button</li></ol>
+            </section>
+            
+    
+  </main>
+
+
+</body></html>

@@ -1,0 +1,7 @@
+{
+  "key": "GL-101",
+  "type": "Story",
+  "summary": "Guest Checkout Without Account",
+  "status": "In Review",
+  "linked_pull_request": "local://greenleaf-checkout/pull/1"
+}

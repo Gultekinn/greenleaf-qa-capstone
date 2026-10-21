@@ -1,0 +1,23 @@
+{
+  "issue_type": "Bug",
+  "summary": "POST /api/promo/validate returns HTTP 500 internal error for expired promo code",
+  "environment": {
+    "tool": "api_probe.py (local API probe - Postman equivalent)",
+    "method": "POST",
+    "url": "http://localhost:3000/api/promo/validate",
+    "request_body": {
+      "code": "EXPIRED20"
+    },
+    "application": "GreenLeaf Grocers (capstone_module_1)"
+  },
+  "preconditions": "API server is running at http://localhost:3000",
+  "steps_to_reproduce": [
+    "Send a POST request to http://localhost:3000/api/promo/validate",
+    "Provide request body with JSON: {\"code\": \"EXPIRED20\"}"
+  ],
+  "expected_result": "Graceful 4xx rejection (e.g. HTTP 400 with a clear invalid-code message).",
+  "actual_result": "Server returns HTTP 500 Internal Server Error instead of a graceful rejection.",
+  "severity": "Critical",
+  "priority": "High",
+  "evidence": "evidence/api_response.json"
+}

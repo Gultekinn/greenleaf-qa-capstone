@@ -1,0 +1,11 @@
+{
+  "number": 1,
+  "url": "local://greenleaf-checkout/pull/1",
+  "title": "Automate guest checkout happy path",
+  "head": "feature/checkout-happy-path",
+  "base": "main",
+  "status": "open",
+  "files": [
+    "tests/checkout.spec.js"
+  ]
+}

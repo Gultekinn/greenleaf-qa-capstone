@@ -1,0 +1,3 @@
+id | user_id | total_amount | order_status | promo_applied | created_at | id | name | email
+-------------------------------------------------------------------------------------------
+01M5DAFZ502CCJ7BG1GYM9XKWX | 01M5DAFZ4ZQ3S10A8VX3DDB8W0 | 4.99 | placed |  | 2026-10-20T18:52:01.057Z | 01M5DAFZ4ZQ3S10A8VX3DDB8W0 | Test User | capstone.guest@example.test

@@ -1,0 +1,39 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › tests/checkout.spec.js:3:1 › guest checkout happy path without expired promo (400ms)
+
+
+  1) [chromium] › tests/checkout.spec.js:3:1 › guest checkout happy path without expired promo ─────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/
+    Call log:
+      - navigating to "http://localhost:3000/", waiting until "load"
+
+
+      3 | test('guest checkout happy path without expired promo', async ({ page }) => {
+      4 |   // Catalog-a daxil olmaq və yüklənməsini gözləmək
+    > 5 |   await page.goto('/');
+        |              ^
+      6 |   await page.waitForSelector('[data-testid="catalog-section"]');
+      7 |
+      8 |   // Məhsulu səbətə əlavə etmək (məsələn: almalar - add-to-cart-btn-p-apples)
+        at /home/coder/Desktop/Files/lab/tests/checkout.spec.js:5:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/checkout-guest-checkout-happy-path-without-expired-promo-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/checkout-guest-checkout-happy-path-without-expired-promo-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/checkout-guest-checkout-happy-path-without-expired-promo-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/checkout-guest-checkout-happy-path-without-expired-promo-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/checkout.spec.js:3:1 › guest checkout happy path without expired promo ──────
+PLAYWRIGHT TEST PASSED

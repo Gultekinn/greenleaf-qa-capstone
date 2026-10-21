@@ -1,0 +1,8 @@
+
+Running 1 test using 1 worker
+
+(node:14892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\checkout.spec.js:3:1 › guest checkout happy path without expired promo (1.7s)
+
+  1 passed (4.5s)

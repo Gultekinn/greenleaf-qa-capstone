@@ -1,0 +1,22 @@
+{
+  "issue_type": "Bug",
+  "summary": "Apply Promo button overlaps Submit Order button on mobile checkout page",
+  "environment": {
+    "browser": "Chrome",
+    "viewport": "390x844",
+    "operating_system": "Linux VM",
+    "url": "http://localhost:3000/checkout",
+    "application": "GreenLeaf Grocers (capstone_module_1)"
+  },
+  "preconditions": "User has items in the cart and is on the checkout page at mobile viewport width below 768px.",
+  "steps_to_reproduce": [
+    "Navigate to http://localhost:3000/checkout",
+    "Open Chrome DevTools and set device dimensions to 390 x 844",
+    "Scroll down to the promo code and order summary section"
+  ],
+  "expected_result": "Apply Promo and Submit Order buttons are properly spaced and do not overlap.",
+  "actual_result": "Apply Promo visually overlaps Submit Order, completely blocking the submit control.",
+  "severity": "Major",
+  "priority": "High",
+  "evidence": "evidence/ui_bug.png"
+}

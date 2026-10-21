@@ -1,0 +1,37 @@
+{
+  "check_date": "2026-10-21",
+  "method": "Executed submitted SQL against a working copy of supplied SQLite database and WAL; not a new UI run.",
+  "columns": [
+    "id",
+    "user_id",
+    "total_amount",
+    "order_status",
+    "promo_applied",
+    "created_at",
+    "id",
+    "name",
+    "email"
+  ],
+  "rows": [
+    [
+      "01M5DCJ26TM1YM3X59DWSVYZCN",
+      "01M5DCJ26TRYBQRHA06EZ5MQYM",
+      4.99,
+      "placed",
+      null,
+      "2026-10-20T19:28:06.874Z",
+      "01M5DCJ26TRYBQRHA06EZ5MQYM",
+      "Test User",
+      "capstone.guest@example.test"
+    ]
+  ],
+  "confirmation_screenshot_order_id": "01M5DCJ26TM1YM3X59DWSVYZCN",
+  "confirmation_screenshot_order_matches": [
+    {
+      "id": "01M5DCJ26TM1YM3X59DWSVYZCN",
+      "email": "capstone.guest@example.test",
+      "total_amount": 4.99,
+      "order_status": "placed"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "method": "POST",
+  "request_body": {
+    "code": "EXPIRED20"
+  },
+  "response_body": {
+    "error": {
+      "code": "internal_error",
+      "message": "Internal server error."
+    }
+  },
+  "status_code": 500,
+  "url": "http://localhost:3000/api/promo/validate"
+}

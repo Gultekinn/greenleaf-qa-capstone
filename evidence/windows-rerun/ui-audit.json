@@ -1,0 +1,33 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "submitBox": {
+    "x": 41,
+    "y": 774,
+    "width": 308,
+    "height": 48
+  },
+  "promoBox": {
+    "x": 41,
+    "y": 503,
+    "width": 127.15625,
+    "height": 40
+  },
+  "overlapArea": 0,
+  "hitTest": {
+    "submitIsTopElement": true,
+    "topTestId": "checkout-submit-btn",
+    "topText": "Submit Order"
+  },
+  "requiredFieldsCheck": {
+    "valid": false,
+    "invalidFields": [
+      "checkout-name-input",
+      "checkout-email-input",
+      "checkout-address-input"
+    ]
+  },
+  "urlAfterEmptySubmit": "http://localhost:3000/checkout"
+}
