@@ -1,6 +1,13 @@
-# GreenLeaf Grocers — QA Capstone
+# GreenLeaf QA Capstone | Playwright E2E, API and SQL Testing
 
-Manual testing, checkout automation, API defect reporting and SQLite validation for a simulated grocery storefront.
+Manual QA test design, JavaScript Playwright checkout automation, REST API defect investigation and SQL/SQLite order validation for a simulated e-commerce application.
+
+## Portfolio highlights
+
+- **Test design:** 3 manual cases and 2 historical defect reports.
+- **Automation:** 1 verified Playwright checkout test; full runner output included.
+- **Backend checks:** order persistence verified in SQLite; expired-promo HTTP500 reproduced.
+- **Review first:** [test code](tests/checkout.spec.js), [verified results](evidence/windows-rerun/results.json), [release assessment](reports/reviewed-test-summary.md).
 
 ## Project context
 
@@ -64,3 +71,7 @@ The separate [Windows config](evidence/windows-rerun/playwright.windows.config.t
 ## Historical records
 
 Original reports and runner output are preserved for traceability and can contain superseded or contradictory claims. Use the reviewed summary for current conclusions. Phase 1 ticket views originally supplied with PNG names were HTML; their extensions are corrected. They are not direct screenshots of the application defect.
+
+## Related QA portfolio work
+
+[MindBridge automation and reporting](https://github.com/Gultekinn/mindbridge-qa-automation) | [Manual QA practice labs](https://github.com/Gultekinn/qa-practice-labs)
