@@ -1,0 +1,38 @@
+{
+  "test_cases": [
+    {
+      "id": "TC-GL-01",
+      "linked_story": "GL-101",
+      "title": "Guest checkout happy path with valid cart items",
+      "preconditions": "User has items in the cart at http://localhost:3000/cart and is not signed in.",
+      "steps": [
+        "Navigate to http://localhost:3000/checkout",
+        "Fill in required shipping and billing details with valid guest information",
+        "Click the Submit Order button"
+      ],
+      "expected_result": "Order is placed successfully and redirected to order confirmation page with a thank-you message."
+    },
+    {
+      "id": "TC-GL-02",
+      "linked_story": "GL-103",
+      "title": "Checkout form validation blocks submission when required fields are missing",
+      "preconditions": "User has items in the cart and navigates to http://localhost:3000/checkout",
+      "steps": [
+        "Leave required shipping fields (e.g. Full Name or Address) blank",
+        "Click the Submit Order button"
+      ],
+      "expected_result": "Form submission is blocked and visual validation error messages appear for the missing required fields."
+    },
+    {
+      "id": "TC-GL-03",
+      "linked_story": "GL-102",
+      "title": "Promo code edge case validation for expired or invalid codes",
+      "preconditions": "User is on the checkout page http://localhost:3000/checkout with active cart items.",
+      "steps": [
+        "Enter an expired or invalid promo code (e.g., EXPIRED20) into the promo code field",
+        "Click the Apply Promo button"
+      ],
+      "expected_result": "Application displays a graceful user-friendly rejection message stating the promo code is invalid or expired, without crashing."
+    }
+  ]
+}
